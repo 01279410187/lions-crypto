@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styles from "../../style";
 import { Link, Navigate, useNavigate } from "react-router-dom";
-import * as Yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+// import * as Yup from "yup";
+// import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { Transition } from "@headlessui/react";
@@ -14,12 +14,12 @@ export default function Modal() {
   const [Error, setError] = useState();
   const [ToastClose, setToastClose] = useState(false);
 
-  const yupValidation = Yup.object().shape({
-    phoneNumber: Yup.string().required("Please enter PhoneNumber some value."),
-    password: Yup.string().required("Enter valid password"),
-  });
+  // const yupValidation = Yup.object().shape({
+  //   phoneNumber: Yup.string().required("Please enter PhoneNumber some value."),
+  //   password: Yup.string().required("Enter valid password"),
+  // });
 
-  const formOptions = { resolver: yupResolver(yupValidation) };
+  // const formOptions = { resolver: yupResolver(yupValidation) };
   // const { register, handleSubmit, reset, formState } = useForm(formOptions);
   // const { errors } = formState || {}; // Ensure formState is not null
 
